@@ -7,3 +7,12 @@
             include( 'header.php' );
         }
     endif;
+
+    if( ! function_exists( 'get_footer' ) ) :
+        /**
+         * Get header
+         */
+        function get_footer() {
+            include( 'footer.php' );
+        }
+    endif;

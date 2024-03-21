@@ -112,3 +112,20 @@ h1 {
 .product button:hover {
     background-color: #555;
 }
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px; /* Increased padding for more space */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer p {
+    margin: 0; /* Remove default margin */
+  }
+  .footer a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove default underline */
+  }

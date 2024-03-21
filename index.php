@@ -1,6 +1,14 @@
 <?php
     require 'functions.php';
     get_header();
+
+    if( ( array_key_exists( 'success', $_GET ) && ! empty( $_GET['success'] ) ) ):
+        ?>
+            <div class="success-popup">
+                <h2>Payment was successfull.</h2>
+            </div>
+        <?php
+    endif;
 ?>
     <main>
         <section id="products" class="product-list">
@@ -17,7 +25,7 @@
                 <div class="product-details">
                     <h3>Hajmola</h3>
                     <p>Rs 500</p>
-                    <a href="viewcart.php"><button onclick="viewcart.php" class="GFG">Add to Cart</button></a>
+                    <a href="viewcart.php?price=500"><button onclick="viewcart.php" class="GFG">Add to Cart</button></a>
                 </div>
             </div>
             <div class="product">
@@ -25,14 +33,12 @@
                 <div class="product-details">
                     <h3>Imilibom</h3>
                     <p>Rs 500</p>
-                    <a href="viewcart.php"><button onclick="viewcart.php" class="GFG">Add to Cart</button></a>
+                    <a href="viewcart.php?price=500"><button onclick="viewcart.php" class="GFG">Add to Cart</button></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 E-commerce Website. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<?php
+    get_footer();
+?>

@@ -12,17 +12,7 @@
     <div class="container-fluid">
         <div class="row justify-content-around">
             <div class="col-sm-12 col-md-6 col-lg-9">
-                <table class="table table-bordered text-center" >
-                    <thead class=" fs-5">
-                      <th class="bg-danger text-white"  >Serial No.</th>
-                      <th class="bg-danger text-white">Product Name</th>
-                      <th class="bg-danger text-white">Product Price</th>
-                      <th class="bg-danger text-white">Product Quantity</th>
-                      <th class="bg-danger text-white">Total price</th>
-                      <th class="bg-danger text-white">Update</th>
-                      <th class="bg-danger text-white">Delete</th>  
-                    </thead>
-                
+                <table class="table table-bordered text-center" >                
                     <tbody>
                         <?php
                         
@@ -58,7 +48,10 @@
             </div>
             <div class="col-lg-3 text-center">
             <h3>TOTAL</h3>
-                <h1 class="bg-info text-white" > RS: <?php echo number_format($total,2)?>/-</h1>                
+                <?php
+                    $product_price = ( array_key_exists( 'price', $_GET ) && ! empty( $_GET['price'] ) ) ? $_GET['price'] : 0;
+                ?>
+                <h1 class="bg-info text-white" > RS: <?php echo $product_price; ?>/-</h1>                
             </div>
            
         </div>
@@ -70,12 +63,13 @@
             <input value="0" name="pdc" type="hidden">
             <input value="EPAYTEST" name="scd" type="hidden">
             <input value="<?php echo rand(0, 1000000); ?>" name="pid" type="hidden">
-            <input value="http://merchant.com.np/page/esewa_payment_success?q=su" type="hidden" name="su">
+            <input value="http://localhost/ecommerce/index.php?success=1" type="hidden" name="su">
             <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
             <input value="Pay With Esewa" type="submit">
         </form>
         
 
     </div>
-</body>
-</html>
+<?php
+    // get_footer();
+?>
