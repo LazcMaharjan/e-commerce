@@ -2,7 +2,7 @@
 // Database configuration
 $servername = "localhost"; // Change this if your MySQL server is on a different host
 $username = "root"; // Replace with your MySQL username
-$password = "your_password"; // Replace with your MySQL password
+$password = ""; // Replace with your MySQL password
 $database = "ecommerce"; // Replace with the name of your database
 
 // Create connection

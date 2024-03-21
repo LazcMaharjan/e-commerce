@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAZC Supermarkrt</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;LAZC Supermarket</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Add Product</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php
+    require 'functions.php';
+    get_header();
+?>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center bg-light mb-5 rounded">
